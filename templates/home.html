@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block title %}Covid19-Prediction-Home{% endblock title %}
+
+{% block body %}
+{% if data %}
+    <h4 style="color:{{data[1]}}">
+      {{data[0]}}
+    </h4>
+  {% endif %}
+
+<h3>Predict Here !</h3>
+
+ <form action="/" method="post">
+ <div class="symp">
+   <div class="row">
+    <h5 class="active">Coughing</h5>
+      <select name="cough">
+        <option value="0">NO</option>
+        <option value="1">YES</option>
+      </select>
+    </div>
+  </div>
+ <div class="symp">
+    <div class="row">
+    <h5 class="active">Fever</h5>
+      <select name="fever">
+        <option value="0">NO</option>
+        <option value="1">YES</option>
+      </select>
+    </div>
+ </div>
+
+ <div class="symp">
+    <div class="row">
+    <h5 class="active">Difficulty in breathing</h5>
+      <select name="diffbr">
+        <option value="0">NO</option>
+        <option value="1">YES</option>
+      </select>
+    </div>
+ </div>
+
+ <div class="symp">
+     <div class="row">
+    <h5 class="active">Lossing sense of smell and test</h5>
+      <select name="loss_sm">
+        <option value="0">NO</option>
+        <option value="1">YES</option>
+      </select>
+    </div>
+ </div>
+ 
+    <button class="btn waves-effect waves-light #00b0ff light-blue accent-3" type="submit" name="action">Submit</button>
+  </form>
+  
+{% endblock body %}

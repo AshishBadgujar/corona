@@ -1,0 +1,13 @@
+.brand-logo{
+    margin-left: 20px;
+}
+.symp{
+    margin-top: 23px;
+    margin-bottom: 10px;
+}
+select{
+    display: block;
+}
+.container{
+    max-width: 400px;
+}
